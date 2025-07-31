@@ -1,18 +1,27 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - check the code
+ * main - check the code for _strcpy
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    char s1[98];
-    char *ptr;
+	char dest[100];
 
-    ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
-    printf("%s", s1);
-    printf("%s", ptr);
-    return (0);
+	/* Regular string */
+	_strcpy(dest, "Holberton!");
+	printf("str = \"%s\"\n", dest);
+
+	/* Long string */
+	_strcpy(dest, "Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+	printf("str = \"%s\"\n", dest);
+
+	/* Empty string */
+	_strcpy(dest, "");
+	printf("str = \"%s\"\n", dest);
+
+	return (0);
 }
+
