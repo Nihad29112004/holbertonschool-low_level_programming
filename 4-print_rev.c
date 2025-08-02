@@ -1,21 +1,23 @@
+/*
+ * File: 4-print_rev.c
+ * Auth: Brennan D Baraban
+ */
+
 #include "main.h"
 
 /**
- * print_rev - Prints a string in reverse followed by a new line
- * @s: The string to print
+ * print_rev - Prints a string in reverse.
+ * @s: The string to be printed.
  */
 void print_rev(char *s)
 {
-int i = 0;
+int len = 0, index=0;
 
-    /* 1. Tap: Stringin uzunluğunu tap */
-while (s[i] != '\0')
-i++;
+while (s[index++])
+len++;
 
-   /* 2. Tərsinə çap et */
-while (i--)
-_putchar(s[i]);
+for (index = len - 1; index >= 0; index--)
+_putchar(s[index]);
 
 _putchar('\n');
 }
-
