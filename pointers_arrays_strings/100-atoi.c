@@ -1,30 +1,41 @@
-/*
- * File: 100-atoi.c
- * Auth: Brennan D Baraban
- */
-
 #include "main.h"
 
 /**
- * _atoi - Converts a string to an integer.
- * @s: The string to be converted.
+ * _atoi - convert a string to an integer
+ * @s: the string to convert
  *
- * Return: The integer value of the converted string.
+ * Return: the converted integer
  */
 int _atoi(char *s)
 {
+int i = 0;
 int sign = 1;
-unsigned int num = 0;
+unsigned int result = 0;
+int found_digit = 0;
 
-do {
-if (*s == '-')
+    /* İşaretleri ve boşlukları geç */
+while (s[i])
+{
+if (s[i] == '-')
 sign *= -1;
-else if (*s >= '0' && *s <= '9')
-num = (num * 10) + (*s - '0');
-else if (num > 0)
+else if (s[i] == '+')
+            ;
+else if (s[i] >= '0' && s[i] <= '9')
+{
+found_digit = 1;
+            /* Sayıyı oluştur */
+while (s[i] >= '0' && s[i] <= '9')
+{
+result = result * 10 + (s[i] - '0');
+i++;
+}
 break;
-} while (*s++);
-
-return (num * sign);
+}
+i++;
 }
 
+if (!found_digit)
+return (0);
+
+return ((int)(sign * (int)result));
+}

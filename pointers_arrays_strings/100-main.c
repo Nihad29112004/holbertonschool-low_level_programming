@@ -28,3 +28,4 @@ int main(void)
     printf("%d\n", nb);
     return (0);
 }
+
