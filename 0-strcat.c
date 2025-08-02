@@ -27,4 +27,3 @@ dest[dest_len] = '\0';
 
 return (dest);
 }
-
