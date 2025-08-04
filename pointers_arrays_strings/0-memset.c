@@ -1,27 +1,19 @@
-/*
- * File: 0-memset.c
- * Auth: Nihad
- */
-
 #include "main.h"
-#include <stddef.h>
-/**
- * _memset - Custom version of memset. Fills the first n bytes of
- *           the memory area pointed to by @s with the constant byte @b.
- * @s: A pointer to the memory area to be filled.
- * @b: The byte to fill the memory area with.
- * @n: The number of bytes to be filled.
- *
- * Return: A pointer to the filled memory area @s.
- */
 
-void *_memset(void *s, int b, unsigned int n)
+/**
+ * _memset - Custom function to fill memory with a constant byte.
+ * @s: Pointer to the memory area.
+ * @b: The byte to fill with.
+ * @n: Number of bytes to fill.
+ *
+ * Return: Pointer to memory area s.
+ */
+char *_memset(char *s, char b, unsigned int n)
 {
 unsigned int i;
-unsigned char *ptr = s;
 
 for (i = 0; i < n; i++)
-ptr[i] = (unsigned char)b;
+s[i] = b;
 
 return s;
 }

@@ -10,7 +10,8 @@ char *string_toupper(char *);
 char *cap_string(char *);
 int _atoi(char *s);
 char *leet(char *);
-void *_memset(void *s, int b, unsigned int n);
+char *_memset(char *s, char b, unsigned int n);
+
 
 #endif /* MAIN_H */
 
