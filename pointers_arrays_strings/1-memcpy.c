@@ -1,11 +1,12 @@
 #include "main.h"
 /**
- * _memcpy - Custom function to fill memory with a constant byte.
- * @s: Pointer to the memory area.
- * @b: The byte to fill with.
- * @n: Number of bytes to fill.
+ * _memcpy - Copies @n bytes from the memory area pointed
+ *           to by @src into that pointed to by @dest.
+ * @dest: A pointer to the memory area to copy @src into.
+ * @src: The source buffer to copy characters from.
+ * @n: The number of bytes to copy from @src.
  *
- * Return: Pointer to memory area s.
+ * Return: A pointer to the destination buffer @dest.
  */
 
 char *_memcpy(char *dest, const char *src, unsigned int n)
